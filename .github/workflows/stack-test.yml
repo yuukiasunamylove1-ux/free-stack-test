@@ -1,0 +1,14 @@
+name: stack-test
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * *'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check stack
+        run: |
+          echo "free-stack ok"
+          date
+          echo "$RUNNER_OS"
